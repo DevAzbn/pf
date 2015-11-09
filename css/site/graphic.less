@@ -1,0 +1,72 @@
+body {
+	#site.bg(@c-fe-body-bg);
+	#site.color(@c-fe-body-color);
+	#site.size(10px);
+	background-image: url('@{url-path-img}/tpl/body-bg-grass.png'), url('@{url-path-img}/tpl/body-bg-sun.png');
+	background-position:center bottom, right top;
+	background-repeat:repeat-x, no-repeat;
+	background-size:auto 150px, auto auto;
+	background-color:transparent, transparent;
+	display:block;
+	overflow-y:hidden;
+}
+
+.menu {
+	
+	ul.menu-list {
+		.mp0;
+		display:block;
+		list-style-type:none;
+		
+		li {
+			display:block;
+			
+			&.active {
+				a {
+					#site.color(@c-fe-item-block-color);
+				}
+			}
+			
+			a {
+				display:block;
+				#site.color(@c-fe-body-color);
+				#site.size(2em);
+				line-height:4em;
+				height:4em;
+				padding-left: 2em;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+			
+		}
+	}
+	
+	.social-block {
+		/*
+		line-height:8em;
+		height:8em;
+		padding-left:4em;
+		padding-top: 1.25em;
+		*/
+		#site.bg(@c-fe-social-block-bg);
+		text-align: center;
+	}
+}
+
+.content {
+	overflow-x:hidden;
+}
+
+.txt {
+	
+	&.shad {
+		#site.size(1.4em);
+		/*.ts();*/
+		line-height:2.1em;
+	}
+	.goout {
+		#site.color(@c-hex-r1);
+		#site.underline();
+	}
+	
+}

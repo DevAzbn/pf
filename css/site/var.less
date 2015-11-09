@@ -1,0 +1,121 @@
+/*
+@url-site:'http://localhost:5891';
+@url-path:'@{url-site}';
+@url-path-css:'@{url-path}/css';
+@url-path-img:'@{url-path}/img';
+@url-path-js:'@{url-path}/js';
+*/
+
+@url-site:'';
+@url-path:'./..';
+@url-path-css:'@{url-path}/css';
+@url-path-img:'@{url-path}/img';
+@url-path-js:'@{url-path}/js';
+
+@media-size-xs: ~"(max-width: 767px)";
+@media-size-sm: ~"(min-width: 768px) and (max-width: 991px)";
+@media-size-md: ~"(min-width: 992px) and (max-width: 1199px)";
+@media-size-lg: ~"(min-width: 1200px)";
+@media-size-portrait: ~"all and (orientation:portrait)";
+@media-size-landscape: ~"all and (orientation:landscape)";
+@media-size-retina: ~"all and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-ms-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)";
+@media-size-print: ~"print";
+
+@trans-speed: 0.33s;
+
+
+
+/*
+
+фисташковый 190,245,116 #bef574
+
+123,168,63		#7ba83f
+209,255,146		#d1ff92
+190,245,116		#bef574
+147,46,168		#932ea8
+222,116,245		#de74f5
+
+*/
+
+@c-hex-b:	#000000;
+@c-hex-w:	#ffffff;
+@c-hex-sw:	#f5f8fa;
+
+@c-hex-l2:	#7ba83f;
+@c-hex-l1:	#d1ff92;
+@c-hex-c0:	#bef574;
+@c-hex-r1:	#932ea8;
+@c-hex-r2:	#de74f5;
+
+
+
+
+@c-rgb-b: rgba(0,0,0,1);
+@c-rgb-w: rgba(255,255,255,1);
+@c-rgb-red: rgba(255,0,0,1);
+
+@c-rgb-l2:	rgba(123,168,63,1);
+@c-rgb-l1:	rgba(209,255,146,1);
+@c-rgb-c0:	rgba(190,245,116,1);
+@c-rgb-r1:	rgba(147,46,168,1);
+@c-rgb-r2:	rgba(222,116,245,1);
+
+
+@c-rgb-b-050: rgba(0,0,0,0.5);
+@c-rgb-l1-060: rgba(209,255,146,0.6);
+@c-rgb-c0-050:	rgba(190,245,116,0.5);
+
+
+
+
+@c-fe-body-bg:						@c-hex-sw;/*@c-hex-sw;*/
+@c-fe-body-color:					@c-hex-b;
+
+@c-fe-item-block-bg:				rgba(190,245,116,0.64);
+@c-fe-item-block-color:				@c-hex-b;
+
+@c-fe-title-link-bg:				transparent;
+@c-fe-title-link-active-bg:			@c-hex-c0;
+@c-fe-title-link-active-before-bg:	@c-hex-l2 * 0.35;
+@c-fe-title-link-color:				@c-hex-b;
+
+@c-fe-social-block-bg: rgba(222,116,245,0.64);
+
+@c-fe-main_info-bg:					@c-hex-l1;
+@c-fe-main_info-color:				@c-hex-b;
+@c-fe-main_info-border:				@c-hex-r1;
+
+@c-svg-fill:						@c-hex-b;
+@c-svg-stroke:						@c-hex-w;
+
+@c-rgb-workplace-actual-bg:	rgba(123,168,63,0.1);
+
+
+#site {
+	
+	.bg(@color:#ffffff) {
+		background-color:@color;
+	}
+	.color(@color:#ffffff) {
+		color:@color;
+	}
+	.underline(@val:underline) {
+		text-decoration:@val;
+	}
+	.uppercase(@val:uppercase) {
+		text-transform:@val;
+	}
+	.size(@val:10px) {
+		font-size:@val;
+	}
+	.bold(@val:bold) {
+		font-weight:@val;
+	}
+	.italic(@val:italic) {
+		font-style:@val;
+	}
+	.z(@val:1) {
+		z-index:@val;
+	}
+	
+}

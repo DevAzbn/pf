@@ -1,0 +1,33 @@
+.tmp {
+	&.i800x600 {
+		background-image:url('http://placehold.it/800x600');
+	}
+	
+	&.color-list {
+		
+		span {
+			display:inline-block;
+			width:2em;
+			height:2em;
+			content:'';
+			
+			&:nth-child(1) {
+				#site.bg(@c-hex-l2);
+			}
+			&:nth-child(2) {
+				#site.bg(@c-hex-l1);
+			}
+			&:nth-child(3) {
+				#site.bg(@c-hex-c0);
+			}
+			&:nth-child(4) {
+				#site.bg(@c-hex-r1);
+			}
+			&:nth-child(5) {
+				#site.bg(@c-hex-r2);
+			}
+			
+		}
+		
+	}
+}

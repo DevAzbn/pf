@@ -1,0 +1,115 @@
+
+/* ------- Адаптивность ------- */
+@media @media-size-xs { /*xs*/
+	.fecss {
+		
+		.adaptive-block {
+			width:100%;
+		}
+		.not-xs {
+			display: none !important;
+		}
+		
+	}
+	
+	@import "media/xs.less";
+}
+@media @media-size-sm { /*sm*/
+	.fecss {
+		
+		.adaptive-block {
+			width:750px;
+		}
+		.not-sm {
+			display: none !important;
+		}
+		
+	}
+	
+	@import "media/sm.less";
+}
+@media @media-size-md { /*md*/
+	.fecss {
+		
+		.adaptive-block {
+			width:970px;
+		}
+		.not-md {
+			display: none !important;
+		}
+		
+	}
+	
+	@import "media/md.less";
+}
+@media @media-size-lg { /*lg*/
+	.fecss {
+		
+		.adaptive-block {
+			width:1170px;
+		}
+		.not-lg {
+			display: none !important;
+		}
+		
+	}
+	
+	@import "media/lg.less";
+}
+@media @media-size-portrait { /*portrait*/
+	.fecss {
+		
+		.adaptive-block {
+			
+		}
+		.not-portrait {
+			display: none !important;
+		}
+		
+	}
+	
+	@import "media/portrait.less";
+}
+@media @media-size-landscape { /*landscape*/
+	.fecss {
+		
+		.adaptive-block {
+			
+		}
+		.not-landscape {
+			display: none !important;
+		}
+		
+	}
+	
+	@import "media/landscape.less";
+}
+@media @media-size-retina { /*retina*/
+	.fecss {
+		
+		.adaptive-block {
+			
+		}
+		.not-retina {
+			display: none !important;
+		}
+		
+	}
+	
+	@import "media/retina.less";
+}
+/* ------- /Адаптивность ------- */
+
+
+/* ------- Запрет вывода на печать ------- */
+@media @media-size-print {
+	.fecss {
+		
+		.not-print {
+			display: none !important;
+		}
+		
+	}
+	@import "media/print.less";
+}
+/* ------- /Запрет вывода на печать ------- */
