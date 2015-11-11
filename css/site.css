@@ -4565,7 +4565,7 @@ http://daneden.github.io/animate.css/
 .workplace {
   padding: 2em 0em;
   margin-bottom: 6em;
-  opacity: 0.4;
+  opacity: 0.65;
   -webkit-transition: all 0.33s ease;
   transition: all 0.33s ease;
 }
@@ -4831,6 +4831,7 @@ http://daneden.github.io/animate.css/
   }
   .content .workplace {
     padding: 2em 1em;
+    opacity: 1;
   }
   .content .workplace:hover .date-period {
     display: block;
@@ -4925,6 +4926,7 @@ http://daneden.github.io/animate.css/
   }
   .content .workplace {
     padding: 2em 1em;
+    opacity: 1;
   }
   .content .workplace:hover .date-period {
     display: block;
