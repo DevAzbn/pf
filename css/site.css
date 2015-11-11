@@ -439,7 +439,7 @@ section {
   outline: 1px #000000 solid;
   padding: 0.5em;
   -webkit-transition: all 0.33s ease;
-  transition: all 0.33s ease;
+          transition: all 0.33s ease;
 }
 .fecss .btn:hover {
   color: #ffffff;
@@ -562,9 +562,7 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+          transition: transform 1s ease;
 }
 .fecss .arrow-slider.mod.without-points .arrow-block .point-line {
   display: none;
@@ -1052,9 +1050,7 @@ html body .fecss .full-height {
 }
 .fecss .hover-scale {
   -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+          transition: transform 1s ease;
 }
 .fecss .hover-scale:hover {
   display: inline-block;
@@ -1114,7 +1110,7 @@ html body .fecss .full-height {
 }
 .fecss .full-screen.page-loader {
   -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
+          transition: all 0.7s ease;
   opacity: 0;
   height: 0%;
 }
@@ -1165,7 +1161,7 @@ html body .fecss .full-height {
   background-color: #999999;
   color: rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+          transition: all 0.4s ease;
 }
 .fecss .full-screen.page-loader .close-loader:hover {
   background-color: #ffffff;
@@ -1227,7 +1223,7 @@ html body .fecss .full-height {
   background-image: url('../img/fecss/go-to-top.png');
   text-decoration: none;
   -webkit-transition: all 0.999s ease;
-  transition: all 0.999s ease;
+          transition: all 0.999s ease;
 }
 .fecss .go-to-top.active {
   width: 65px;
@@ -3934,29 +3930,53 @@ http://daneden.github.io/animate.css/
   }
 }
 .animated {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.33s;
+          animation-duration: 0.33s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   /* бесконечно */
+}
+.animated.long2x {
+  -webkit-animation-duration: 0.66s;
+          animation-duration: 0.66s;
+}
+.animated.long3x {
+  -webkit-animation-duration: 0.99s;
+          animation-duration: 0.99s;
+}
+.animated.long4x {
+  -webkit-animation-duration: 1.32s;
+          animation-duration: 1.32s;
+}
+.animated.long5x {
+  -webkit-animation-duration: 1.65s;
+          animation-duration: 1.65s;
+}
+.animated.long6x {
+  -webkit-animation-duration: 1.98s;
+          animation-duration: 1.98s;
+}
+.animated.long10x {
+  -webkit-animation-duration: 3.3s;
+          animation-duration: 3.3s;
 }
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 .animated.hinge {
-  -webkit-animation-duration: 1.65s;
-          animation-duration: 1.65s;
+  -webkit-animation-duration: 0.33s;
+          animation-duration: 0.33s;
 }
 .animated.bounceIn,
 .animated.bounceOut {
-  -webkit-animation-duration: 0.66s;
-          animation-duration: 0.66s;
+  -webkit-animation-duration: 0.33s;
+          animation-duration: 0.33s;
 }
 .animated.flipOutX,
 .animated.flipOutY {
-  -webkit-animation-duration: 0.66s;
-          animation-duration: 0.66s;
+  -webkit-animation-duration: 0.33s;
+          animation-duration: 0.33s;
 }
 .animated.bounce {
   -webkit-animation-name: animated-bounce;
@@ -4451,8 +4471,12 @@ http://daneden.github.io/animate.css/
     margin: 0px 2em;
   }
 }
+.dyn-text-container {
+  height: 100%;
+}
 .dyn-text-container .item {
   position: relative;
+  height: 100%;
 }
 .dyn-text-container .item.passive {
   z-index: -3;
@@ -4481,10 +4505,10 @@ http://daneden.github.io/animate.css/
 .dyn-text-container .item .title a.title-link.active:before {
   content: '';
   position: fixed;
-  left: 0px;
-  top: 0px;
+  right: 0px;
+  bottom: -25000%;
   width: 100%;
-  height: 100%;
+  height: 50000%;
   background-color: #2b3b16;
   z-index: -2;
 }
@@ -4525,7 +4549,7 @@ http://daneden.github.io/animate.css/
   position: fixed;
   display: block;
   left: 33.33333333%;
-  bottom: 100%;
+  bottom: 150%;
   border: 1px #932ea8 solid;
   -webkit-transition: all 0.33s ease;
   transition: all 0.33s ease;
@@ -4558,6 +4582,10 @@ http://daneden.github.io/animate.css/
 }
 .dyn-text-container .item .main_info p {
   line-height: 1.5em;
+}
+.dyn-text-container .item .main_info p.item-link {
+  font-weight: bold;
+  margin-bottom: 1.5em;
 }
 .mb-6 {
   margin-bottom: 6em;

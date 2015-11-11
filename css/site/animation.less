@@ -52,8 +52,27 @@ http://daneden.github.io/animate.css/
 
 
 .animated {
-	animation-duration: 1s;
+	animation-duration: @trans-speed;
 	animation-fill-mode: both;
+	
+	&.long2x {
+		animation-duration: @trans-speed * 2;
+	}
+	&.long3x {
+		animation-duration: @trans-speed * 3;
+	}
+	&.long4x {
+		animation-duration: @trans-speed * 4;
+	}
+	&.long5x {
+		animation-duration: @trans-speed * 5;
+	}
+	&.long6x {
+		animation-duration: @trans-speed * 6;
+	}
+	&.long10x {
+		animation-duration: @trans-speed * 10;
+	}
 	
 	/* бесконечно */
 	&.infinite {
@@ -61,15 +80,15 @@ http://daneden.github.io/animate.css/
 	}
 	
 	&.hinge {
-		animation-duration: @trans-speed * 5;
+		animation-duration: @trans-speed;
 	}
 	
 	&.bounceIn, &.bounceOut {
-		animation-duration: @trans-speed * 2;
+		animation-duration: @trans-speed;
 	}
 	
 	&.flipOutX, &.flipOutY {
-		animation-duration: @trans-speed * 2;
+		animation-duration: @trans-speed;
 	}
 	
 	&.bounce {

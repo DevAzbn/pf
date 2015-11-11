@@ -224,9 +224,11 @@
 }
 
 .dyn-text-container {
+	height:100%;
 	
 	.item {
 		position:relative;
+		height:100%;
 		
 		&.passive {
 			z-index:-3;
@@ -264,10 +266,10 @@
 					&:before {
 						content:'';
 						position:fixed;
-						left:0px;
-						top:0px;
+						right:0px;
+						bottom:-25000%;
 						width:100%;
-						height:100%;
+						height:50000%;
 						#site.bg(@c-fe-title-link-active-before-bg);
 						z-index:-2;
 					}
@@ -308,7 +310,7 @@
 			position:fixed;
 			display:block;
 			left:33.33333333%;
-			bottom:100%;
+			bottom:150%;
 			overflow:hidden;
 			border:1px @c-fe-main_info-border solid;
 			
@@ -348,6 +350,11 @@
 			
 			p {
 				line-height:1.5em;
+				
+				&.item-link {
+					#site.bold();
+					margin-bottom:1.5em;
+				}
 			}
 			
 			
