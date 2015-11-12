@@ -8,6 +8,37 @@ var iface = {
 		}
 	},
 	
+	addItemBlock:function(title, href, html) {
+		var menu_i = $('<li/>',{
+			class : 'menu-item animated wobble long2x',
+			html : '<a class="nowrap " href="#' + href + '" >' + title + '</a>',
+		});
+		var block_i = $('<div/>',{
+			id : href,
+			class : 'item-block ',
+			html : '<a class="menu-btn not-md not-lg iconic ui-btn list" href="#menu" data-title="' + title + '" ></a><div class="allmargin" >' + html + '</div>',
+		});
+		
+		$('.content').eq(0).find('#' + href + '.item-block').empty().remove();
+		$('.menu .menu-list').eq(0).find('.menu-item a[href="#' + href + '"]').empty().remove();
+		
+		block_i.prependTo($('.content').eq(0));
+		menu_i.prependTo($('.menu .menu-list').eq(0)).find('a').trigger('click');
+		
+		var size = $('.menu .menu-list').eq(0).find('.menu-item').size();
+		if(size > 8) {
+			var del_i = $('.menu .menu-list').eq(0).find('.menu-item').eq(-1);
+			var href = del_i.attr('href');
+			del_i.empty().remove();
+			$('.content').eq(0).find(href + '.item-block').eq(0).empty().remove();
+		}
+		
+	},
+	
+	loadItemBlock:function(href) {
+		
+	},
+	
 }
 
 $(document).ready(function() {
