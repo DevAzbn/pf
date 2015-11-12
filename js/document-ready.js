@@ -318,6 +318,20 @@ end .fecss document-ready
 */
 
 
+/*
+start .got-to-top document-ready
+*/
+
+$(document.ready).on('click', '.go-to-top', function(event){
+	event.preventDefault();
+	$('body').jqfeScrollTo({diff:0,speed:777});
+});
+
+/*
+end .got-to-top document-ready
+*/
+
+
 	$('.page-loader .close-loader').on('click',function(event){
 		event.preventDefault();
 		$('.page-loader').removeClass('active');
@@ -338,20 +352,6 @@ $('.scrollto').on('click', function(event){
 
 /*
 end .scrollto document-ready
-*/
-
-
-/*
-start .got-to-top document-ready
-*/
-
-$(document.ready).on('click', '.go-to-top', function(event){
-	event.preventDefault();
-	$('body').jqfeScrollTo({diff:0,speed:777});
-});
-
-/*
-end .got-to-top document-ready
 */
 
 
