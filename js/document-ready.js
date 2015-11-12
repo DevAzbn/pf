@@ -27,6 +27,8 @@ $(document).ready(function() {
 				
 				//$('.content').addClass('xs-active');
 				$('.menu').removeClass('mobile-active');
+				
+				$('.dyn-text-container .item .title a.title-link.active').trigger('click');
 			}
 		);
 	
@@ -78,11 +80,13 @@ $(document).ready(function() {
 				var btn = $(this);
 				if(btn.hasClass('active')) {
 					$('.dyn-text-container .item').removeClass('passive');
+					$('.dyn-text-container .item .preview').removeClass('nowrap');
 					btn.parent().parent().removeClass('passive');
 					$('.item-block .menu-btn').removeClass('passive');
 					btn.removeClass('active');
 				} else {
 					$('.dyn-text-container .item').addClass('passive');
+					btn.parent().parent().find('.preview').addClass('nowrap');
 					btn.parent().parent().removeClass('passive');
 					$('.item-block .menu-btn').addClass('passive');
 					btn.addClass('active');
