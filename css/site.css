@@ -1394,6 +1394,9 @@ body {
   color: #932ea8;
   text-decoration: underline;
 }
+.ajax-buffer {
+  display: none;
+}
 .tmp.i800x600 {
   background-image: url('http://placehold.it/800x600');
 }
@@ -4533,6 +4536,7 @@ http://daneden.github.io/animate.css/
   z-index: 2;
   background-color: #bef574;
   text-decoration: none;
+  font-weight: bold;
 }
 .dyn-text-container .item .title a.title-link.active:before {
   content: '';

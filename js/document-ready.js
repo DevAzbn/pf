@@ -16,7 +16,7 @@ var iface = {
 		var block_i = $('<div/>',{
 			id : href,
 			class : 'item-block ',
-			html : '<a class="menu-btn not-md not-lg iconic ui-btn list" href="#menu" data-title="' + title + '" ></a><div class="allmargin" >' + html + '</div>',
+			html : html,//'<a class="menu-btn not-md not-lg iconic ui-btn list" href="#menu" data-title="' + title + '" ></a><div class="allmargin" >' + html + '</div>',
 		});
 		
 		$('.content').eq(0).find('#' + href + '.item-block').empty().remove();
@@ -36,13 +36,25 @@ var iface = {
 	},
 	
 	loadItemBlock:function(href) {
-		
+		$.get(href, {}, function(data){
+			var buf = $('<div/>',{
+				class : 'ajax-buffer',
+			});
+			buf.html(data);
+			var menu_i = buf.find('.menu .menu-list .menu-item a').eq(0);
+			var block_i = buf.find('.content .item-block').eq(0);
+			var title = menu_i.html();
+			var href = block_i.attr('id');
+			var html = block_i.html();
+			buf.empty().remove();
+			iface.addItemBlock(title, href, html);
+		});
 	},
 	
 }
 
 $(document).ready(function() {
-
+	
 	$(document.body)
 		.on(
 			'click',
@@ -122,6 +134,18 @@ $(document).ready(function() {
 					$('.item-block .menu-btn').addClass('passive');
 					btn.addClass('active');
 				}
+			}
+		);
+	
+	
+	$(document.body)
+		.on(
+			'click',
+			'.ajax-load',
+			function(event){
+				event.preventDefault();
+				var btn = $(this);
+				iface.loadItemBlock(btn.attr('href'));
 			}
 		);
 
@@ -294,20 +318,6 @@ end .fecss document-ready
 */
 
 
-/*
-start .got-to-top document-ready
-*/
-
-$(document.ready).on('click', '.go-to-top', function(event){
-	event.preventDefault();
-	$('body').jqfeScrollTo({diff:0,speed:777});
-});
-
-/*
-end .got-to-top document-ready
-*/
-
-
 	$('.page-loader .close-loader').on('click',function(event){
 		event.preventDefault();
 		$('.page-loader').removeClass('active');
@@ -328,6 +338,20 @@ $('.scrollto').on('click', function(event){
 
 /*
 end .scrollto document-ready
+*/
+
+
+/*
+start .got-to-top document-ready
+*/
+
+$(document.ready).on('click', '.go-to-top', function(event){
+	event.preventDefault();
+	$('body').jqfeScrollTo({diff:0,speed:777});
+});
+
+/*
+end .got-to-top document-ready
 */
 
 
