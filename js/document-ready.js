@@ -67,6 +67,7 @@ $(document).ready(function() {
 				iface.setActive($('.content .item-block'), false);
 				iface.setActive(btn.parent(), true);
 				iface.setActive($(href), true);
+				$('.content').scrollTop(0);
 				
 				//$('.content').addClass('xs-active');
 				$('.menu').removeClass('mobile-active');
