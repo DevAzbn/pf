@@ -35,6 +35,8 @@
 147,46,168		#932ea8
 222,116,245		#de74f5
 
+приятный серый 245,248,250 #f5f8fa
+
 */
 
 @c-hex-b:	#000000;
@@ -53,6 +55,8 @@
 @c-rgb-b: rgba(0,0,0,1);
 @c-rgb-w: rgba(255,255,255,1);
 @c-rgb-red: rgba(255,0,0,1);
+@c-rgb-sw: rgba(245,248,250,1);
+
 
 @c-rgb-l2:	rgba(123,168,63,1);
 @c-rgb-l1:	rgba(209,255,146,1);
@@ -65,25 +69,27 @@
 @c-rgb-l1-060: rgba(209,255,146,0.6);
 @c-rgb-c0-050:	rgba(190,245,116,0.5);
 
+@c-rgb-sw-025: rgba(245,248,250,0.25);
+@c-rgb-sw-050: rgba(245,248,250,0.5);
+@c-rgb-sw-075: rgba(245,248,250,0.75);
 
 
-
-@c-fe-body-bg:						@c-hex-sw;/*@c-hex-sw;*/
+@c-fe-body-bg:						@c-hex-sw;
 @c-fe-body-color:					@c-hex-b;
 
-@c-fe-item-block-bg:				rgba(190,245,116,0.37);
+@c-fe-item-block-bg:				@c-rgb-sw-075;/*rgba(190,245,116,0.37);*/
 @c-fe-item-block-color:				@c-hex-b;
 
 @c-fe-title-link-bg:				transparent;
-@c-fe-title-link-active-bg:			@c-hex-c0;
-@c-fe-title-link-active-before-bg:	@c-hex-l2 * 0.35;
+@c-fe-title-link-active-bg:			@c-hex-sw;
+@c-fe-title-link-active-before-bg:	@c-hex-sw * 0.35;
 @c-fe-title-link-color:				@c-hex-b;
 
-@c-fe-social-block-bg: rgba(222,116,245,0.64);
+@c-fe-social-block-bg: rgba(222,116,245,0.32);
 
-@c-fe-main_info-bg:					@c-hex-l1;
+@c-fe-main_info-bg:					@c-hex-sw;
 @c-fe-main_info-color:				@c-hex-b;
-@c-fe-main_info-border:				@c-hex-r1;
+@c-fe-main_info-border:				@c-hex-sw;
 
 @c-svg-fill:						@c-hex-b;
 @c-svg-stroke:						@c-hex-w;
