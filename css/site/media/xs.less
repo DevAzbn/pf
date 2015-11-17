@@ -5,7 +5,7 @@
 	height:100% !important;
 	left:-100%;
 	top:0;
-	#site.bg(@c-hex-l1);
+	#site.bg(@c-hex-sw);
 	overflow-y:overlay;
 	-moz-transition: all @trans-speed*0.5 ease;
 	-ms-transition: all @trans-speed*0.5 ease;
@@ -19,7 +19,7 @@
 	
 	.menu-item {
 		a {
-			#site.bg(@c-hex-l1);
+			#site.bg(@c-hex-sw);
 		}
 		
 		&.active {
@@ -58,7 +58,7 @@
 				#site.uppercase();
 				#site.underline(none);
 				#site.color(@c-hex-w);
-				#site.bg(@c-rgb-r1);
+				#site.bg(@c-rgb-l2);
 				/*#site.size(10px);*/
 				line-height:2em;
 				.box-sizing-bbox();
@@ -80,6 +80,16 @@
 				}
 			}
 			
+		}
+		
+		.item {
+			.title {
+			
+				a.title-link {
+					#site.bold();
+				}
+				
+			}
 		}
 		
 		.allmargin {

@@ -321,7 +321,7 @@
 			left:33.33333333%;
 			bottom:150%;
 			overflow:hidden;
-			border:1px @c-fe-main_info-border solid;
+			border:1px transparent solid;
 			
 			-moz-transition: all @trans-speed ease;
 			-ms-transition: all @trans-speed ease;
@@ -335,12 +335,14 @@
 				& {
 					left:0%;
 					width:100%;
+					border-top:1px @c-fe-main_info-border solid;
 				}
 			}
 			@media @media-size-sm {
 				& {
 					left:0%;
 					width:100%;
+					border-top:1px @c-fe-main_info-border solid;
 				}
 			}
 			@media @media-size-md {
