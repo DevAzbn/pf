@@ -11,7 +11,7 @@ var iface = {
 	addItemBlock:function(title, href, html) {
 		var menu_i = $('<li/>',{
 			class : 'menu-item animated wobble long2x',
-			html : '<a class="nowrap " href="#' + href + '" >' + title + '</a>',
+			html : '<a class="nowrap not-go" href="#' + href + '" >' + title + '</a>',
 		});
 		var block_i = $('<div/>',{
 			id : href,
@@ -58,7 +58,7 @@ $(document).ready(function() {
 	$(document.body)
 		.on(
 			'click',
-			'.menu .menu-list li a',
+			'.menu .menu-list li a.not-go',
 			function(event){
 				event.preventDefault();
 				var btn = $(this);
@@ -79,7 +79,7 @@ $(document).ready(function() {
 	
 	$(
 		function(){
-			var item_list = $('.menu .menu-list li a[href="' + window.location.hash + '"]');
+			var item_list = $('.menu .menu-list li a.not-go[href="' + window.location.hash + '"]');
 			var size = item_list.size();
 			if(size) {
 				item_list.eq(0).trigger('click');

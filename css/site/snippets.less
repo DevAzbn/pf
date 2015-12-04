@@ -631,3 +631,31 @@
 .ajax-load {
 	
 }
+
+.input-block {
+	display:block;
+	margin:1em 0;
+	
+	label {
+		display: block;
+		font-size: 1.5em;
+		margin-bottom: 0.3em;
+		font-weight: bold;
+	}
+	input, select, textarea {
+		font-size: 2em;
+		padding: 0.3em;
+		display: block;
+		width: 100%;
+		border: 1px green solid;
+	}
+}
+
+.btn {
+	&.big-btn {
+		padding: 0.75em 4em;
+		#site.bold();
+		#site.bg(@c-hex-r1);
+		#site.color(@c-hex-w);
+	}
+}
